@@ -35,6 +35,12 @@ done
 echo -n "Your select: "
 read sel
 
+# Use: 
+# if [[ "${sel:-X}" == "X" ]] || [ $sel -lt "0" ] && [ $sel -ge $linen ]; then
+#       echo "Invalid selection" ; exit 0
+# fi
+# Try no to test empty variables.
+
 if [[ "$sel" == "" ]]; then
     echo "Invalid selection"
     exit 0
